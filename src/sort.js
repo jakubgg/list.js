@@ -31,8 +31,8 @@ module.exports = function(list) {
       }
     },
     getInSensitive: function(btn, options) {
-      var insensitive = getAttribute(btn, 'data-insensitive');
       if (insensitive === "true") {
+      var insensitive = btn.hasAttribute('data-insensitive') ? getAttribute(btn, 'data-insensitive') : 'true';
         options.insensitive = true;
       } else {
         options.insensitive = false;
